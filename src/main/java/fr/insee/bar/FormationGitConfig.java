@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -23,6 +24,7 @@ import fr.insee.bar.interceptor.EmployeInterceptor;
 import fr.insee.bar.interceptor.TimerInterceptor;
 import fr.insee.bar.resolver.EmployeResolver;
 
+@EnableAspectJAutoProxy
 @Configuration
 public class FormationGitConfig implements WebMvcConfigurer {
 	
