@@ -24,12 +24,29 @@
 		<c:if test="${not empty message}">
 			<p class="success"><c:out value="${message}" /></p>
 		</c:if>
+		<p>
+		<c:if test="${not clients.first}">
+			<c:url var="previous" value="clients">
+				<c:param name="page" value="${clients.number - 1}" />
+				<c:param name="size" value="${clients.size}" />
+			</c:url>
+			<a href="${previous}">&lt;</a>
+		</c:if>
+		<c:out value="${clients.number}"></c:out> / <c:out value="${clients.totalPages}"></c:out>
+		<c:if test="${not clients.last}">
+			<c:url var="next" value="clients">
+				<c:param name="page" value="${clients.number + 1}" />
+				<c:param name="size" value="${clients.size}" />
+			</c:url>
+			<a href="${next}">&gt;</a>
+		</c:if>
+		</p>
 		<table>
 		<tr>
-			<th>Id</th>
 			<th>Nom</th>
+			<th>Email</th>
 		</tr>
-		<c:forEach items="${clients}" var="client">
+		<c:forEach items="${clients.content}" var="client">
 			<c:url var="url" value="client/${client.id}" />
 			<tr>
 				<td><a href="${url}">${client.nom}</a></td>

@@ -21,7 +21,7 @@
 			<c:out value="${message}" />
 		</p>
 		<ul>
-			<li><a href="<c:url value="clients" />">Liste des clients</a></li>
+			<li><a href="<c:url value="clients?size=15" />">Liste des clients</a></li>
 			<li><a href="<c:url value="commande" />">Passer une commande</a></li>
 		</ul>
 	</section>
