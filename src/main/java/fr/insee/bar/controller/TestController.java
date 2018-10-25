@@ -20,10 +20,11 @@ public class TestController {
 		List<ActivityPojo> activities = json.getActivities();
 		for (int i = 0; i < activities.size(); i++) {
 			if (activities.get(i) instanceof DrugPojo) {
-				// do stuff
+				System.out.println("DrugPojo");
 			}
 			else
 				if (activities.get(i) instanceof ObservationPojo) {
+					System.out.println("ObservationPojo");
 					// do stuff
 				}
 		}

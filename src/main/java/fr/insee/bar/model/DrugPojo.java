@@ -3,14 +3,13 @@ package fr.insee.bar.model;
 @SuppressWarnings("serial")
 public class DrugPojo extends ActivityPojo {
 
-	private String measurementWeight;
+	private String drugDisplay;
 
-	public String getMeasurementWeight() {
-		return measurementWeight;
+	public String getDrugDisplay() {
+		return drugDisplay;
 	}
 
-	public void setMeasurementWeight(String measurementWeight) {
-		this.measurementWeight = measurementWeight;
+	public void setDrugDisplay(String drugDisplay) {
+		this.drugDisplay = drugDisplay;
 	}
-
 }
