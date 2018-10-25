@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @SuppressWarnings("serial")
-public class TestClassPojo implements Serializable {
+public class TestPojo implements Serializable {
 
 	private String code;
 	private String display;

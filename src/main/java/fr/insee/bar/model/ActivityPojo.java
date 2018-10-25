@@ -16,6 +16,4 @@ public class ActivityPojo implements Serializable {
 	public void setCategoryCode(String categoryCode) {
 		this.categoryCode = categoryCode;
 	}
-	
-	
 }

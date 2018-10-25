@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import fr.insee.bar.model.ActivityPojo;
 import fr.insee.bar.model.DrugPojo;
 import fr.insee.bar.model.ObservationPojo;
-import fr.insee.bar.model.TestClassPojo;
+import fr.insee.bar.model.TestPojo;
 
 @Controller
 public class TestController {
 	
 	@PostMapping("/test")
-	public ResponseEntity<String> consumeJson(@RequestBody TestClassPojo json) {
+	public ResponseEntity<String> consumeJson(@RequestBody TestPojo json) {
 		List<ActivityPojo> activities = json.getActivities();
 		for (int i = 0; i < activities.size(); i++) {
 			if (activities.get(i) instanceof DrugPojo) {
